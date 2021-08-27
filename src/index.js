@@ -5,11 +5,14 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+import { StateProvider } from './store.js';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
+    <StateProvider>
     <App />
+    </StateProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
